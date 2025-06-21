@@ -16,7 +16,22 @@ function Contact() {
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('Name change:', e.target.value);
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('Email change:', e.target.value);
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('Message change:', e.target.value);
+    setMessage(e.target.value);
+  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -65,43 +80,43 @@ function Contact() {
             <div className='form-flex'>
               <TextField
                 required
-                id="outlined-required"
+                id="name-field"
                 label="Your Name"
                 placeholder="What's your name?"
                 value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
+                onChange={handleNameChange}
                 error={nameError}
                 helperText={nameError ? "Please enter your name" : ""}
+                variant="outlined"
+                fullWidth
               />
               <TextField
                 required
-                id="outlined-required"
+                id="email-field"
                 label="Email / Phone"
                 placeholder="How can I reach you?"
                 value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
+                onChange={handleEmailChange}
                 error={emailError}
                 helperText={emailError ? "Please enter your email or phone number" : ""}
+                variant="outlined"
+                fullWidth
               />
             </div>
             <TextField
               required
-              id="outlined-multiline-static"
+              id="message-field"
               label="Message"
               placeholder="Send me any inquiries or questions"
               multiline
               rows={10}
               className="body-form"
               value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
+              onChange={handleMessageChange}
               error={messageError}
               helperText={messageError ? "Please enter the message" : ""}
+              variant="outlined"
+              fullWidth
             />
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
               Send
