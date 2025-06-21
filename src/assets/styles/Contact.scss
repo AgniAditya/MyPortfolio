@@ -21,14 +21,78 @@
   fieldset {
     background-color: white;
   }
+
+  // Make placeholders and text visible
+  .MuiTextField-root {
+    .MuiInputBase-root {
+      .MuiInputBase-input {
+        &::placeholder {
+          color: #666 !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  // Style for HTML input elements
+  .input-group {
+    margin-bottom: 15px;
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      color: #050f0b;
+      font-size: 1rem;
+      font-family: inherit;
+      
+      &::placeholder {
+        color: #666;
+        opacity: 1;
+      }
+      
+      &:focus {
+        outline: none;
+        border-color: #5000ca;
+        box-shadow: 0 0 0 2px rgba(80, 0, 202, 0.2);
+      }
+      
+      &.error {
+        border-color: #d32f2f;
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .error-text {
+      color: #d32f2f;
+      font-size: 0.875rem;
+      margin-top: 5px;
+      display: block;
+    }
+  }
 }
 
 label {
   font-size: 1.2rem;
   font-family: 'DomaineDispNar-Medium', sans-serif;
+  z-index: 1;
 }
 
-.form-flex {
+.form-flex {  
   display: flex;
   gap: 15px;
   padding-bottom: 15px;

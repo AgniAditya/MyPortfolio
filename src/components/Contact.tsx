@@ -4,7 +4,6 @@ import '../assets/styles/Contact.scss';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
-import TextField from '@mui/material/TextField';
 
 function Contact() {
 
@@ -28,7 +27,7 @@ function Contact() {
     setEmail(e.target.value);
   };
 
-  const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     console.log('Message change:', e.target.value);
     setMessage(e.target.value);
   };
@@ -78,46 +77,43 @@ function Contact() {
             className='contact-form'
           >
             <div className='form-flex'>
-              <TextField
-                required
-                id="name-field"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={handleNameChange}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-                variant="outlined"
-                fullWidth
-              />
-              <TextField
-                required
-                id="email-field"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={handleEmailChange}
-                error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
-                variant="outlined"
-                fullWidth
-              />
+              <div className="input-group">
+                <label htmlFor="name-field">Your Name</label>
+                <input
+                  type="text"
+                  id="name-field"
+                  placeholder="What's your name?"
+                  value={name}
+                  onChange={handleNameChange}
+                  className={nameError ? 'error' : ''}
+                />
+                {nameError && <span className="error-text">Please enter your name</span>}
+              </div>
+              <div className="input-group">
+                <label htmlFor="email-field">Email / Phone</label>
+                <input
+                  type="text"
+                  id="email-field"
+                  placeholder="How can I reach you?"
+                  value={email}
+                  onChange={handleEmailChange}
+                  className={emailError ? 'error' : ''}
+                />
+                {emailError && <span className="error-text">Please enter your email or phone number</span>}
+              </div>
             </div>
-            <TextField
-              required
-              id="message-field"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={handleMessageChange}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-              variant="outlined"
-              fullWidth
-            />
+            <div className="input-group">
+              <label htmlFor="message-field">Message</label>
+              <textarea
+                id="message-field"
+                placeholder="Send me any inquiries or questions"
+                rows={10}
+                value={message}
+                onChange={handleMessageChange}
+                className={messageError ? 'error' : ''}
+              />
+              {messageError && <span className="error-text">Please enter the message</span>}
+            </div>
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
               Send
             </Button>
