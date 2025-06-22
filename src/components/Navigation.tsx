@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [['Resume', 'mycv'],['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -57,6 +57,15 @@ function Navigation({parentToChild, modeChange}: any) {
     }
   };
 
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Aditya_Agnihotri_CV.pdf';
+    link.download = 'Aditya_Agnihotri_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <p className="mobile-menu-top"><ListIcon/>Menu</p>
@@ -64,7 +73,7 @@ function Navigation({parentToChild, modeChange}: any) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => item[0] === 'Resume' ? handleResumeDownload() : scrollToSection(item[1])}>
               <ListItemText primary={item[0]} />
             </ListItemButton>
           </ListItem>
@@ -94,7 +103,7 @@ function Navigation({parentToChild, modeChange}: any) {
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+              <Button key={item[0]} onClick={() => item[0] === 'Resume' ? handleResumeDownload() : scrollToSection(item[1])} sx={{ color: '#fff' }}>
                 {item[0]}
               </Button>
             ))}
