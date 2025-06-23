@@ -59,7 +59,7 @@ function Navigation({parentToChild, modeChange}: any) {
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Aditya_Agnihotri_CV.pdf';
+    link.href = `${process.env.PUBLIC_URL}/Aditya_Agnihotri_CV.pdf`;
     link.download = 'Aditya_Agnihotri_CV.pdf';
     document.body.appendChild(link);
     link.click();
