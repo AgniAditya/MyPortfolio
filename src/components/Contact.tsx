@@ -32,36 +32,58 @@ function Contact() {
     setMessage(e.target.value);
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    setNameError(name === '');
-    setEmailError(email === '');
-    setMessageError(message === '');
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+  
+    const hasError = {
+      name: name.trim() === '',
+      email: email.trim() === '',
+      message: message.trim() === '',
+    };
+  
+    setNameError(hasError.name);
+    setEmailError(hasError.email);
+    setMessageError(hasError.message);
+  
+    if (hasError.name || hasError.email || hasError.message) return;
+  
+    const formData = {
+      name,
+      email,
+      message,
+    };
+  
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxv5L_LvmxOk9YSx6Rj5NjBdst_IzelZmxede1GwUka8kSA79xQXylmDehC1t7fJSLg/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+  
+      const result = await response.json();
+  
+      if (result.result === "success") {
+        alert("Your message has been sent and stored successfully!");
+        setName('');
+        setEmail('');
+        setMessage('');
+        setNameError(false);
+        setEmailError(false);
+        setMessageError(false);
+      } else {
+        alert("There was an issue submitting the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
   };
+  
 
   return (
     <div id="contact">
