@@ -1,12 +1,14 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 function Contact() {
-
+  
+  const [open, setOpen] = useState(false);
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
@@ -34,7 +36,7 @@ function Contact() {
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+    
     const hasError = {
       name: name.trim() === '',
       email: email.trim() === '',
@@ -65,20 +67,14 @@ function Contact() {
           body: JSON.stringify(formData),
         }
       );
-  
-      const result = await response.json();
-  
-      if (result.result === "success") {
-        alert("Your message has been sent and stored successfully!");
-        setName('');
-        setEmail('');
-        setMessage('');
-        setNameError(false);
-        setEmailError(false);
-        setMessageError(false);
-      } else {
-        alert("There was an issue submitting the form. Please try again.");
-      }
+      setOpen(true);
+
+      setName('');
+      setEmail('');
+      setMessage('');
+      setNameError(false);
+      setEmailError(false);
+      setMessageError(false);
     } catch (error) {
       console.error("Form submission error:", error);
     }
@@ -140,6 +136,11 @@ function Contact() {
               Send
             </Button>
           </Box>
+          <Snackbar open={open} autoHideDuration={4000} onClose={() => setOpen(false)}>
+            <MuiAlert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
+              Your message has been sent and stored successfully!
+            </MuiAlert>
+          </Snackbar>
         </div>
       </div>
     </div>
