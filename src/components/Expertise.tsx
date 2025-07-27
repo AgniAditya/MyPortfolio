@@ -14,9 +14,7 @@ const languages = [
 const frontend = [
     "HTML",
     "CSS",
-    "Bootstrap",
-    "JavaScripts",
-    "React (learning)"
+    "JavaScripts"
 ]
 
 const backend = [
@@ -24,7 +22,6 @@ const backend = [
     "Express.js",
     "FastAPI",
     "REST APIs",
-    "Spring Boot (learning)"
 ]
 
 const database = [
@@ -54,7 +51,6 @@ const mlops_lib = [
 const concepts = [
     "Data Structures & Algorithms", 
     "Object Oriented Programming (OOP)", 
-    "System Design (learning)"
 ]
 
 function Expertise() {
@@ -76,17 +72,6 @@ function Expertise() {
                     </div>
                 </div>
                 <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Frontend</h3>
-                    <p>Basic understanding of building responsive user interfaces and working with modern UI frameworks. Able to create simple, user-friendly web pages and currently exploring component-based development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {frontend.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
                     <FontAwesomeIcon icon={faServer} size="3x"/>
                     <h3>Backend</h3>
                     <p>Designed and built robust backend systems with a focus on clean architecture, RESTful APIs, and integration with databases and external services. Experience in building scalable, secure, and production-ready APIs.</p>
@@ -98,12 +83,12 @@ function Expertise() {
                     </div>
                 </div>
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
-                    <h3>Database</h3>
-                    <p>Familiar with working on both relational and non-relational databases, including basic schema design, data handling, and simple query writing.</p>
+                    <FontAwesomeIcon icon={faInfinity} size="3x"/>
+                    <h3>MLOps</h3>
+                    <p>Built and deployed real-world ML projects with full MLOps integration. Implemented automated pipelines, model versioning, containerization, and deployed models as APIs and web apps. Focused on creating scalable, production-ready solutions.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {database.map((label, index) => (
+                        {mlops_lib.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
@@ -120,12 +105,23 @@ function Expertise() {
                     </div>
                 </div>
                 <div className="skill">
-                    <FontAwesomeIcon icon={faInfinity} size="3x"/>
-                    <h3>MLOps</h3>
-                    <p>Built and deployed real-world ML projects with full MLOps integration. Implemented automated pipelines, model versioning, containerization, and deployed models as APIs and web apps. Focused on creating scalable, production-ready solutions.</p>
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
+                    <h3>Database</h3>
+                    <p>Familiar with working on both relational and non-relational databases, including basic schema design, data handling, and simple query writing.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {mlops_lib.map((label, index) => (
+                        {database.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+                <div className="skill">
+                    <FontAwesomeIcon icon={faReact} size="3x"/>
+                    <h3>Frontend</h3>
+                    <p>Basic understanding of building responsive user interfaces and working with modern UI frameworks. Able to create simple, user-friendly web pages and currently exploring component-based development.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Tech stack:</span>
+                        {frontend.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
