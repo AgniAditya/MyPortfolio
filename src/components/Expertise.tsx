@@ -2,7 +2,7 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
-import { faArrowsToCircle, faCode, faDatabase, faInfinity, faScrewdriverWrench, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsToCircle, faCloud, faCode, faDatabase, faInfinity, faScrewdriverWrench, faServer, faShield } from "@fortawesome/free-solid-svg-icons";
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 const languages = [
@@ -22,11 +22,14 @@ const backend = [
     "Express.js",
     "FastAPI",
     "REST APIs",
+    "JWT",
 ]
 
 const database = [
     "MySQL",
-    "SQLite"
+    "SQLite",
+    "MongoDB",
+    "Mongoose",
 ]
 
 const tools_and_devOps = [
@@ -35,7 +38,9 @@ const tools_and_devOps = [
     "Docker", 
     "Docker Hub", 
     "GitHub Actions", 
-    "Prisma"
+    "Prisma",
+    "Postman",
+    "dotenv"
 ]
 
 const mlops_lib = [
@@ -46,6 +51,17 @@ const mlops_lib = [
     "NumPy", 
     "Matplotlib", 
     "ZenML"
+]
+
+const file_handling_and_Cloud_Services = [
+    "Multer",
+    "Cloudinary",
+]
+
+const security_and_utilities = [
+    "bcrypt",
+    "CORS",
+    "mongoose-aggregate-paginate-v2",
 ]
 
 const concepts = [
@@ -111,6 +127,28 @@ function Expertise() {
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {database.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+                <div className="skill">
+                    <FontAwesomeIcon icon={faCloud} size="3x"/>
+                    <h3>File Handling & Cloud Services</h3>
+                    <p>Experienced in implementing file handling and cloud-based storage solutions, including secure upload processes, media management, and efficient retrieval and transformation of assets.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Tech stack:</span>
+                        {file_handling_and_Cloud_Services.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+                <div className="skill">
+                    <FontAwesomeIcon icon={faShield} size="3x"/>
+                    <h3>Security & Utilities</h3>
+                    <p>Basic understanding of building responsive user interfaces and working with modern UI frameworks. Able to create simple, user-friendly web pages and currently exploring component-based development.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Tech stack:</span>
+                        {security_and_utilities.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>

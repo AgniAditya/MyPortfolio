@@ -16,14 +16,14 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="July 2025 - current"
+            date="July 2025 - August 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">CodeOrbit - Online IDE</h3>
+            <h3 className="vertical-timeline-element-title">Youtube Backend Clone</h3>
             <h4 className="vertical-timeline-element-subtitle">Personal Project</h4>
             <p>
-              Developing CodeOrbit, an online IDE aimed at providing a seamless coding experience directly in the browser with real-time editing and GitHub sync features.
+              Scalable backend API for a YouTube-like platform with user auth, video management, and subscriptions, built using Node.js, Express, and MongoDB.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
