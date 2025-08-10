@@ -145,7 +145,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faShield} size="3x"/>
                     <h3>Security & Utilities</h3>
-                    <p>Basic understanding of building responsive user interfaces and working with modern UI frameworks. Able to create simple, user-friendly web pages and currently exploring component-based development.</p>
+                    <p>Familiar with implementing secure authentication practices, managing cross-origin requests, and optimizing database queries with efficient pagination for scalable application performance.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {security_and_utilities.map((label, index) => (
