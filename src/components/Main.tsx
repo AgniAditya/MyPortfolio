@@ -18,7 +18,7 @@ function Main() {
             <a href="mailto:agniaditya05@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
           <h1>Aditya Agnihotri</h1>
-          <p>Software Engineer</p>
+          <p>Aspiring Software Engineer</p>
 
           <div className="mobile_social_icons">
             <a href="https://github.com/AgniAditya" target="_blank" rel="noreferrer"><GitHubIcon/></a>

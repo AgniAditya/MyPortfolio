@@ -29,7 +29,6 @@ const database = [
     "MySQL",
     "SQLite",
     "MongoDB",
-    "Mongoose",
 ]
 
 const tools_and_devOps = [
@@ -40,7 +39,8 @@ const tools_and_devOps = [
     "GitHub Actions", 
     "Prisma",
     "Postman",
-    "dotenv"
+    "dotenv",
+    "Mongoose",
 ]
 
 const mlops_lib = [
