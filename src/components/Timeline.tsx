@@ -1,4 +1,3 @@
-import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
@@ -48,10 +47,10 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">MLOps Engineer</h3>
+            <h3 className="vertical-timeline-element-title">House Price Prediction</h3>
             <h4 className="vertical-timeline-element-subtitle">Personal Project</h4>
             <p>
-              Built an end-to-end House Price Prediction system using ZenML, MLflow, and Docker
+              Built an end-to-end House Price Prediction system using ZenML, MLflow, Scikit-Learn, and Docker
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
