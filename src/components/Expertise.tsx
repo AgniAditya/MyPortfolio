@@ -11,57 +11,31 @@ const languages = [
     "JavaScript"
 ]
 
-const frontend = [
-    "HTML",
-    "CSS",
-    "JavaScripts"
-]
-
 const backend = [
     "Node.js",
     "Express.js",
     "FastAPI",
     "REST APIs",
-    "JWT",
 ]
 
 const database = [
     "MySQL",
-    "SQLite",
     "MongoDB",
+    "SQLite",
 ]
 
 const tools_and_devOps = [
-    "Git", 
-    "GitHub", 
+    "Git",
     "Docker", 
-    "Docker Hub", 
-    "GitHub Actions", 
-    "Prisma",
+    "GitHub Actions",
     "Postman",
-    "dotenv",
-    "Mongoose",
 ]
 
 const mlops_lib = [
-    "MLflow", 
-    "DVC", 
     "Scikit-learn", 
+    "MLflow",  
     "Pandas", 
     "NumPy", 
-    "Matplotlib", 
-    "ZenML"
-]
-
-const file_handling_and_Cloud_Services = [
-    "Multer",
-    "Cloudinary",
-]
-
-const security_and_utilities = [
-    "bcrypt",
-    "CORS",
-    "mongoose-aggregate-paginate-v2",
 ]
 
 const concepts = [
@@ -99,6 +73,17 @@ function Expertise() {
                     </div>
                 </div>
                 <div className="skill">
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
+                    <h3>Database</h3>
+                    <p>Familiar with working on both relational and non-relational databases, including basic schema design, data handling, and simple query writing.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Tech stack:</span>
+                        {database.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+                <div className="skill">
                     <FontAwesomeIcon icon={faInfinity} size="3x"/>
                     <h3>MLOps</h3>
                     <p>Built and deployed real-world ML projects with full MLOps integration. Implemented automated pipelines, model versioning, containerization, and deployed models as APIs and web apps. Focused on creating scalable, production-ready solutions.</p>
@@ -116,50 +101,6 @@ function Expertise() {
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {tools_and_devOps.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
-                    <h3>Database</h3>
-                    <p>Familiar with working on both relational and non-relational databases, including basic schema design, data handling, and simple query writing.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {database.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
-                    <FontAwesomeIcon icon={faCloud} size="3x"/>
-                    <h3>File Handling & Cloud Services</h3>
-                    <p>Experienced in implementing file handling and cloud-based storage solutions, including secure upload processes, media management, and efficient retrieval and transformation of assets.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {file_handling_and_Cloud_Services.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
-                    <FontAwesomeIcon icon={faShield} size="3x"/>
-                    <h3>Security & Utilities</h3>
-                    <p>Familiar with implementing secure authentication practices, managing cross-origin requests, and optimizing database queries with efficient pagination for scalable application performance.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {security_and_utilities.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Frontend</h3>
-                    <p>Basic understanding of building responsive user interfaces and working with modern UI frameworks. Able to create simple, user-friendly web pages and currently exploring component-based development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {frontend.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
