@@ -29,7 +29,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="July 2025 - July 2025"
+            date="July 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
@@ -37,20 +37,6 @@ function Timeline() {
             <h4 className="vertical-timeline-element-subtitle">Personal Project</h4>
             <p>
               Lightweight backend user authentication stack built with Node.js, Express, Prisma, and SQLite, complemented by a simple frontend.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="May 2025 - June 2025"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">House Price Prediction</h3>
-            <h4 className="vertical-timeline-element-subtitle">Personal Project</h4>
-            <p>
-              Built an end-to-end House Price Prediction system using ZenML, MLflow, Scikit-Learn, and Docker
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

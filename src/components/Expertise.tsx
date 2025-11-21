@@ -2,8 +2,7 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
-import { faArrowsToCircle, faCloud, faCode, faDatabase, faInfinity, faScrewdriverWrench, faServer, faShield } from "@fortawesome/free-solid-svg-icons";
-import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { faArrowsToCircle, faCode, faDatabase, faScrewdriverWrench, faServer } from "@fortawesome/free-solid-svg-icons";
 
 const languages = [
     "Python",
@@ -31,16 +30,10 @@ const tools_and_devOps = [
     "Postman",
 ]
 
-const mlops_lib = [
-    "Scikit-learn", 
-    "MLflow",  
-    "Pandas", 
-    "NumPy", 
-]
-
 const concepts = [
     "Data Structures & Algorithms", 
     "Object Oriented Programming (OOP)", 
+    "Database Management System"
 ]
 
 function Expertise() {
@@ -79,17 +72,6 @@ function Expertise() {
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {database.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
-                    <FontAwesomeIcon icon={faInfinity} size="3x"/>
-                    <h3>MLOps</h3>
-                    <p>Built and deployed real-world ML projects with full MLOps integration. Implemented automated pipelines, model versioning, containerization, and deployed models as APIs and web apps. Focused on creating scalable, production-ready solutions.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {mlops_lib.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
