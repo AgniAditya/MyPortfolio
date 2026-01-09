@@ -15,12 +15,26 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="December 2025 - January 2026"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">AI Resume Builder</h3>
+            <h4 className="vertical-timeline-element-subtitle">MERN Project</h4>
+            <p>
+              AI Resume Builder is a MERN-stack web application that allows users to generate high-quality, professional resumes using Artificial Intelligence.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
             date="July 2025 - August 2025"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Youtube Backend Clone</h3>
-            <h4 className="vertical-timeline-element-subtitle">Personal Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">Backend Project</h4>
             <p>
               Scalable backend API for a YouTube-like platform with user auth, video management, and subscriptions, built using Node.js, Express, and MongoDB.
             </p>
@@ -34,7 +48,7 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">User Authantication System</h3>
-            <h4 className="vertical-timeline-element-subtitle">Personal Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">Small Project</h4>
             <p>
               Lightweight backend user authentication stack built with Node.js, Express, Prisma, and SQLite, complemented by a simple frontend.
             </p>

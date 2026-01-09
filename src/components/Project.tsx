@@ -2,12 +2,18 @@ import HPPmodel from '../assets/images/HPPmodel.png';
 import HomePage from '../assets/images/HomePage.png';
 import '../assets/styles/Project.scss';
 import YouTubeBackendClone from '../assets/images/YouTube Backend Clone.png';
+import AIResumeBuilder from '../assets/images/AI-Resume-Builder.png'
 
 function Project() {
     return(
     <div className="projects-container" id="projects">
         <h1>Projects</h1>
         <div className="projects-grid">
+            <div className="project">
+                <a href="https://github.com/AgniAditya/AI-Resume-Builder" target="_blank" rel="noreferrer"><img src={AIResumeBuilder} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/AgniAditya/AI-Resume-Builder" target="_blank" rel="noreferrer"><h2>AI Resume Builder</h2></a>
+                <p>AI Resume Builder is a full-stack web application that uses AI to generate professional, job-ready resumes from user-provided information through a cloud-hosted backend and modern React frontend.</p>
+            </div>
             <div className="project">
                 <a href="https://github.com/AgniAditya/Youtube-Backend-Building" target="_blank" rel="noreferrer"><img src={YouTubeBackendClone} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/AgniAditya/Youtube-Backend-Building" target="_blank" rel="noreferrer"><h2>Youtube Backend Clone</h2></a>
