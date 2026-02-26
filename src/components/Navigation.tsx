@@ -58,12 +58,10 @@ function Navigation({parentToChild, modeChange}: any) {
   };
 
   const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/Aditya_Agnihotri_CV.pdf`;
-    link.download = 'Aditya_Agnihotri_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(
+      "https://drive.google.com/file/d/1dcGeKyIyymcmPcYZLXOt2z7O-mFTKBkv/view?usp=sharing",
+      "_blank"
+    )
   };
 
   const drawer = (

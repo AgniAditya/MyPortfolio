@@ -33,7 +33,9 @@ const tools_and_devOps = [
 const concepts = [
     "Data Structures & Algorithms", 
     "Object Oriented Programming (OOP)", 
-    "Database Management System"
+    "Database Management System",
+    "Operating System",
+    "Computer Networks"
 ]
 
 function Expertise() {
