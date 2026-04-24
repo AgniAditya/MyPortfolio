@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import emailjs from "@emailjs/browser"
 
 function Contact() {
   
@@ -16,6 +17,10 @@ function Contact() {
   const [nameError, setNameError] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  type AlertSeverity = "success" | "error" | "warning" | "info";
+  const [severity, setSeverity] = useState<AlertSeverity>("success");
+
 
   const form = useRef<HTMLFormElement>(null);
 
@@ -46,38 +51,55 @@ function Contact() {
     setNameError(hasError.name);
     setEmailError(hasError.email);
     setMessageError(hasError.message);
-  
-    if (hasError.name || hasError.email || hasError.message) return;
-  
-    const formData = {
-      name,
-      email,
-      message,
-    };
-  
-    try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxv5L_LvmxOk9YSx6Rj5NjBdst_IzelZmxede1GwUka8kSA79xQXylmDehC1t7fJSLg/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-      setOpen(true);
 
+    if (hasError.name || hasError.email || hasError.message) {
+      setSnackbarMessage("required all fields");
+      setOpen(true);
+      setSeverity("error");
+      return;
+    }
+
+    const serviceId = process.env.REACT_APP_SERVICE_ID;
+    const templateId = process.env.REACT_APP_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+    setSnackbarMessage("Missing EmailJS configuration");
+    setSeverity("error");
+    setOpen(true);
+    return;
+  }
+
+  const formData = {
+    name: name,
+    reply_to: email,
+    message: message,
+  }
+
+  console.log(formData)
+  
+    emailjs.send(
+      serviceId,
+      templateId,
+      formData,
+      publicKey,
+    ).then(() => {
+      setSnackbarMessage("Your message has been sent successfully!");
+      setSeverity("success");
+      setOpen(true);
+  
       setName('');
       setEmail('');
       setMessage('');
       setNameError(false);
       setEmailError(false);
       setMessageError(false);
-    } catch (error) {
-      console.error("Form submission error:", error);
-    }
+    }).catch((error) => {
+      console.log(error)
+      setSnackbarMessage("something went wrong, can not send message to Aditya");
+      setSeverity("error");
+      setOpen(true);
+    })
   };
   
 
@@ -137,8 +159,8 @@ function Contact() {
             </Button>
           </Box>
           <Snackbar open={open} autoHideDuration={4000} onClose={() => setOpen(false)}>
-            <MuiAlert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
-              Your message has been sent and stored successfully!
+            <MuiAlert onClose={() => setOpen(false)} severity={severity} sx={{ width: '100%' }}>
+              {snackbarMessage}
             </MuiAlert>
           </Snackbar>
         </div>
