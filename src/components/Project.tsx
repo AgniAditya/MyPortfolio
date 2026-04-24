@@ -1,5 +1,6 @@
 import HPPmodel from '../assets/images/HPPmodel.png';
 import HomePage from '../assets/images/HomePage.png';
+import SnakeGame from '../assets/images/SnakeGame.png'
 import '../assets/styles/Project.scss';
 import YouTubeBackendClone from '../assets/images/YouTube Backend Clone.png';
 import AIResumeBuilder from '../assets/images/AI-Resume-Builder.png'
@@ -23,6 +24,13 @@ function Project() {
                 <a href="https://github.com/AgniAditya/User-Authentication-System" target="_blank" rel="noreferrer"><img src={HomePage} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/AgniAditya/User-Authentication-System" target="_blank" rel="noreferrer"><h2>User Authantication System</h2></a>
                 <p>A lightweight, end-to-end user authentication stack using Node.js, Express, Prisma, and SQLite for the backend, with vanilla HTML/CSS/JS for the frontend.</p>
+            </div>
+            <div className="project">
+                <a href="https://github.com/AgniAditya/snake-game-js" target="_blank" rel="noreferrer"><img src={SnakeGame} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/AgniAditya/snake-game-js" target="_blank" rel="noreferrer"><h2>Snake Game</h2></a>
+                <p>
+                    snake game is a JavaScript-based implementation of the classic Snake game with a live demo deployed on Vercel. Built with vanilla JavaScript, HTML, and CSS, it's a lightweight web project.
+                </p>
             </div>
         </div>
     </div>

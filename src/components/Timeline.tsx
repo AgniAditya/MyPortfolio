@@ -15,6 +15,20 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="April 2026"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Snake Game</h3>
+            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <p>
+              snake game is a JavaScript-based implementation of the classic Snake game.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
             date="December 2025 - January 2026"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
@@ -48,7 +62,7 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">User Authantication System</h3>
-            <h4 className="vertical-timeline-element-subtitle">Small Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">Backend Project</h4>
             <p>
               Lightweight backend user authentication stack built with Node.js, Express, Prisma, and SQLite, complemented by a simple frontend.
             </p>
