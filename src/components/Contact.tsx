@@ -73,7 +73,7 @@ function Contact() {
   const formData = {
     name: name,
     reply_to: email,
-    message: message,
+    message: message + "\n" + `email/phone : ${email}`,
   }
 
   console.log(formData)
