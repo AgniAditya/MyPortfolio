@@ -1,6 +1,7 @@
 import HPPmodel from '../assets/images/HPPmodel.png';
 import HomePage from '../assets/images/HomePage.png';
 import SnakeGame from '../assets/images/SnakeGame.png'
+import KanbanBoard from '../assets/images/KanbanBoard.png'
 import '../assets/styles/Project.scss';
 import YouTubeBackendClone from '../assets/images/YouTube Backend Clone.png';
 import AIResumeBuilder from '../assets/images/AI-Resume-Builder.png'
@@ -10,6 +11,20 @@ function Project() {
     <div className="projects-container" id="projects">
         <h1>Projects</h1>
         <div className="projects-grid">
+            <div className="project">
+                <a href="https://github.com/AgniAditya/kanban-board" target="_blank" rel="noreferrer"><img src={KanbanBoard} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/AgniAditya/kanban-board" target="_blank" rel="noreferrer"><h2>Kanban Board</h2></a>
+                <p>
+                    Kanban Board is an interactive task management application built with vanilla JavaScript, CSS, and HTML that allows users to organize and track their work through a visual board interface with drag-and-drop functionality.
+                </p>
+            </div>
+            <div className="project">
+                <a href="https://github.com/AgniAditya/snake-game-js" target="_blank" rel="noreferrer"><img src={SnakeGame} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/AgniAditya/snake-game-js" target="_blank" rel="noreferrer"><h2>Snake Game</h2></a>
+                <p>
+                    snake game is a JavaScript-based implementation of the classic Snake game with a live demo deployed on Vercel. Built with vanilla JavaScript, HTML, and CSS, it's a lightweight web project.
+                </p>
+            </div>
             <div className="project">
                 <a href="https://github.com/AgniAditya/AI-Resume-Builder" target="_blank" rel="noreferrer"><img src={AIResumeBuilder} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/AgniAditya/AI-Resume-Builder" target="_blank" rel="noreferrer"><h2>AI Resume Builder</h2></a>
@@ -24,13 +39,6 @@ function Project() {
                 <a href="https://github.com/AgniAditya/User-Authentication-System" target="_blank" rel="noreferrer"><img src={HomePage} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/AgniAditya/User-Authentication-System" target="_blank" rel="noreferrer"><h2>User Authantication System</h2></a>
                 <p>A lightweight, end-to-end user authentication stack using Node.js, Express, Prisma, and SQLite for the backend, with vanilla HTML/CSS/JS for the frontend.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/AgniAditya/snake-game-js" target="_blank" rel="noreferrer"><img src={SnakeGame} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/AgniAditya/snake-game-js" target="_blank" rel="noreferrer"><h2>Snake Game</h2></a>
-                <p>
-                    snake game is a JavaScript-based implementation of the classic Snake game with a live demo deployed on Vercel. Built with vanilla JavaScript, HTML, and CSS, it's a lightweight web project.
-                </p>
             </div>
         </div>
     </div>

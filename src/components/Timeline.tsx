@@ -19,10 +19,24 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
+            <h3 className="vertical-timeline-element-title">Kanban Board</h3>
+            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <p>
+              A Kanban Board is a drag-and-drop task management app built with HTML, CSS, and JavaScript for visually organizing and tracking work.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="April 2026"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
             <h3 className="vertical-timeline-element-title">Snake Game</h3>
             <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
             <p>
-              snake game is a JavaScript-based implementation of the classic Snake game.
+              Snake game is a JavaScript-based implementation of the classic Snake game.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
