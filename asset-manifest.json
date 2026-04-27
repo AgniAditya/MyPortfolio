@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyPortfolio/static/css/main.a8ab0c58.css",
-    "main.js": "/MyPortfolio/static/js/main.0a1bed6b.js",
+    "main.js": "/MyPortfolio/static/js/main.be6761b3.js",
     "static/js/453.b05d8aa5.chunk.js": "/MyPortfolio/static/js/453.b05d8aa5.chunk.js",
     "static/media/YouTube Backend Clone.png": "/MyPortfolio/static/media/YouTube Backend Clone.0c6333c7877801c5e2f8.png",
     "static/media/HomePage.png": "/MyPortfolio/static/media/HomePage.5845fbfb4df8cbbe9558.png",
@@ -9,13 +9,14 @@
     "static/media/bg-light.png": "/MyPortfolio/static/media/bg-light.bac0efb485244a522981.png",
     "static/media/bg-dark.png": "/MyPortfolio/static/media/bg-dark.f420c6b8458af72de935.png",
     "static/media/SnakeGame.png": "/MyPortfolio/static/media/SnakeGame.44d00840ae8cd4fe1f7d.png",
+    "static/media/KanbanBoard.png": "/MyPortfolio/static/media/KanbanBoard.740f51056869ccdddf63.png",
     "index.html": "/MyPortfolio/index.html",
     "main.a8ab0c58.css.map": "/MyPortfolio/static/css/main.a8ab0c58.css.map",
-    "main.0a1bed6b.js.map": "/MyPortfolio/static/js/main.0a1bed6b.js.map",
+    "main.be6761b3.js.map": "/MyPortfolio/static/js/main.be6761b3.js.map",
     "453.b05d8aa5.chunk.js.map": "/MyPortfolio/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8ab0c58.css",
-    "static/js/main.0a1bed6b.js"
+    "static/js/main.be6761b3.js"
   ]
 }
