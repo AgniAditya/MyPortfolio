@@ -2,12 +2,17 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
-import { faArrowsToCircle, faCode, faDatabase, faScrewdriverWrench, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsToCircle, faCode, faDatabase, faScrewdriverWrench, faServer, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 const languages = [
-    "Python",
     "Java",
-    "JavaScript"
+    "JavaScript",
+    "TypeScript"
+]
+
+const frontend = [
+    "React.js",
+    "TailwindCSS"
 ]
 
 const backend = [
@@ -22,18 +27,16 @@ const database = [
 ]
 
 const tools_and_devOps = [
-    "Git",
-    "Docker", 
+    "Git", 
     "GitHub",
     "Postman",
+    "Vite"
 ]
 
 const concepts = [
     "DSA", 
     "OOP", 
-    "DBMS",
-    "OS",
-    "CN"
+    "OS"
 ]
 
 function Expertise() {
@@ -44,12 +47,23 @@ function Expertise() {
             <div className="skills-grid">
                 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faCode} size="3x"/>
+                    <FontAwesomeIcon icon={faLaptopCode} size="3x"/>
                     <h3>Languages</h3>
                     <p>Skilled in core programming concepts with experience writing clean, maintainable code.</p>
                     <div className="flex-chips">
                         {/* <span className="chip-title">Tech stack:</span> */}
                         {languages.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+                <div className="skill">
+                    <FontAwesomeIcon icon={faCode} size="3x"/>
+                    <h3>Frontend</h3>   
+                    <p>Skilled in building responsive user interfaces using React.js, Tailwind CSS, and Vite with clean and efficient frontend development practices.</p>
+                    <div className="flex-chips">
+                        {/* <span className="chip-title">Tech stack:</span> */}
+                        {frontend.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
@@ -79,7 +93,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faScrewdriverWrench} size="3x"/>
                     <h3>Tools & DevOps</h3>
-                    <p>Familiar with version control, containerization, and API testing concepts, with a basic understanding of development workflows.</p>
+                    <p>Familiar with version control, and API testing concepts, with a basic understanding of development workflows.</p>
                     <div className="flex-chips">
                         {/* <span className="chip-title">Tech stack:</span> */}
                         {tools_and_devOps.map((label, index) => (
@@ -90,7 +104,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faArrowsToCircle} size="3x"/>
                     <h3>Core Concepts</h3>
-                    <p>Strong in DSA, OOP, DBMS, OS, and CN with ability to build efficient solutions.</p>
+                    <p>Strong in DSA, OOP, and OS with ability to build efficient solutions.</p>
                     <div className="flex-chips">
                         {/* <span className="chip-title">Tech stack:</span> */}
                         {concepts.map((label, index) => (

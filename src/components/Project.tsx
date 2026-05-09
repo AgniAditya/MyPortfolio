@@ -2,6 +2,7 @@ import HPPmodel from '../assets/images/HPPmodel.png';
 import HomePage from '../assets/images/HomePage.png';
 import SnakeGame from '../assets/images/SnakeGame.png'
 import KanbanBoard from '../assets/images/KanbanBoard.png'
+import NotesApp from '../assets/images/NotesApp.png'
 import '../assets/styles/Project.scss';
 import YouTubeBackendClone from '../assets/images/YouTube Backend Clone.png';
 import AIResumeBuilder from '../assets/images/AI-Resume-Builder.png'
@@ -11,6 +12,13 @@ function Project() {
     <div className="projects-container" id="projects">
         <h1>Projects</h1>
         <div className="projects-grid">
+            <div className="project">
+                <a href="https://github.com/AgniAditya/react-js/tree/main/09-notes-app" target="_blank" rel="noreferrer"><img src={NotesApp} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/AgniAditya/react-js/tree/main/09-notes-app" target="_blank" rel="noreferrer"><h2>Notes App</h2></a>
+                <p>
+                    A lightweight React.js web application for creating, editing, and managing colorful sticky notes. Built with Vite and Tailwind CSS, it uses React Context API for state management and browser localStorage for persistent data storage. Features a clean, responsive UI with multi-colored notes and full CRUD functionality.
+                </p>
+            </div>
             <div className="project">
                 <a href="https://github.com/AgniAditya/kanban-board" target="_blank" rel="noreferrer"><img src={KanbanBoard} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/AgniAditya/kanban-board" target="_blank" rel="noreferrer"><h2>Kanban Board</h2></a>
