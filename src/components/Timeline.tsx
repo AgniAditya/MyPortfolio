@@ -19,6 +19,20 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
+            <h3 className="vertical-timeline-element-title">Media Search</h3>
+            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <p>
+              Built a React-based media search app integrating Unsplash, Pexels, and GIPHY APIs with infinite scroll, lazy loading, and Redux state management.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="May 2026"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
             <h3 className="vertical-timeline-element-title">Notes Web App</h3>
             <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
             <p>

@@ -12,6 +12,8 @@ const languages = [
 
 const frontend = [
     "React.js",
+    "HTML",
+    "CSS",
     "TailwindCSS"
 ]
 

@@ -1,17 +1,24 @@
-import HPPmodel from '../assets/images/HPPmodel.png';
 import HomePage from '../assets/images/HomePage.png';
 import SnakeGame from '../assets/images/SnakeGame.png'
 import KanbanBoard from '../assets/images/KanbanBoard.png'
 import NotesApp from '../assets/images/NotesApp.png'
-import '../assets/styles/Project.scss';
 import YouTubeBackendClone from '../assets/images/YouTube Backend Clone.png';
 import AIResumeBuilder from '../assets/images/AI-Resume-Builder.png'
+import MediaSearchApp from '../assets/images/MediaSearchApp.png'
+import '../assets/styles/Project.scss';
 
 function Project() {
     return(
     <div className="projects-container" id="projects">
         <h1>Projects</h1>
         <div className="projects-grid">
+            <div className="project">
+                <a href="https://github.com/AgniAditya/react-js/tree/main/13-redux-project" target="_blank" rel="noreferrer"><img src={MediaSearchApp} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/AgniAditya/react-js/tree/main/13-redux-project" target="_blank" rel="noreferrer"><h2>Media Search</h2></a>
+                <p>
+                    Built a responsive media search app using React.js, Redux Toolkit, and TailwindCSS that integrates Unsplash, Pexels, and GIPHY APIs with infinite scroll, lazy loading, and persistent collections via localStorage.
+                </p>
+            </div>
             <div className="project">
                 <a href="https://github.com/AgniAditya/react-js/tree/main/09-notes-app" target="_blank" rel="noreferrer"><img src={NotesApp} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/AgniAditya/react-js/tree/main/09-notes-app" target="_blank" rel="noreferrer"><h2>Notes App</h2></a>
