@@ -1,9 +1,12 @@
-import '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import '../assets/styles/Timeline.scss'
+import "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import "../assets/styles/Timeline.scss";
 
 function Timeline() {
   return (
@@ -13,100 +16,149 @@ function Timeline() {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            date="July 2026"
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Notification Service
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Backend Project
+            </h4>
+            <p>
+              Architected an event-driven notification pipeline using Kafka for
+              Email, SMS, and Push with isolated consumers, preventing
+              cross-channel failures.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="May 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Media Search</h3>
-            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">
+              Frontend Project
+            </h4>
             <p>
-              Built a React-based media search app integrating Unsplash, Pexels, and GIPHY APIs with infinite scroll, lazy loading, and Redux state management.
+              Built a React-based media search app integrating Unsplash, Pexels,
+              and GIPHY APIs with infinite scroll, lazy loading, and Redux state
+              management.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="May 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Notes Web App</h3>
-            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">
+              Frontend Project
+            </h4>
             <p>
-              A React.js sticky notes application with color options, built with Vite, Tailwind CSS, Context API, and localStorage persistence.
+              A React.js sticky notes application with color options, built with
+              Vite, Tailwind CSS, Context API, and localStorage persistence.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="April 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Kanban Board</h3>
-            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">
+              Frontend Project
+            </h4>
             <p>
-              A Kanban Board is a drag-and-drop task management app built with HTML, CSS, and JavaScript for visually organizing and tracking work.
+              A Kanban Board is a drag-and-drop task management app built with
+              HTML, CSS, and JavaScript for visually organizing and tracking
+              work.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="April 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Snake Game</h3>
-            <h4 className="vertical-timeline-element-subtitle">Frontend Project</h4>
+            <h4 className="vertical-timeline-element-subtitle">
+              Frontend Project
+            </h4>
             <p>
-              Snake game is a JavaScript-based implementation of the classic Snake game.
+              Snake game is a JavaScript-based implementation of the classic
+              Snake game.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="December 2025 - January 2026"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">AI Resume Builder</h3>
+            <h3 className="vertical-timeline-element-title">
+              AI Resume Builder
+            </h3>
             <h4 className="vertical-timeline-element-subtitle">MERN Project</h4>
             <p>
-              AI Resume Builder is a MERN-stack web application that allows users to generate high-quality, professional resumes using Artificial Intelligence.
+              AI Resume Builder is a MERN-stack web application that allows
+              users to generate high-quality, professional resumes using
+              Artificial Intelligence.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="July 2025 - August 2025"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Youtube Backend Clone</h3>
-            <h4 className="vertical-timeline-element-subtitle">Backend Project</h4>
+            <h3 className="vertical-timeline-element-title">
+              Youtube Backend Clone
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Backend Project
+            </h4>
             <p>
-              Scalable backend API for a YouTube-like platform with user auth, video management, and subscriptions, built using Node.js, Express, and MongoDB.
+              Scalable backend API for a YouTube-like platform with user auth,
+              video management, and subscriptions, built using Node.js, Express,
+              and MongoDB.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
             date="July 2025"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">User Authantication System</h3>
-            <h4 className="vertical-timeline-element-subtitle">Backend Project</h4>
+            <h3 className="vertical-timeline-element-title">
+              User Authantication System
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Backend Project
+            </h4>
             <p>
-              Lightweight backend user authentication stack built with Node.js, Express, Prisma, and SQLite, complemented by a simple frontend.
+              Lightweight backend user authentication stack built with Node.js,
+              Express, Prisma, and SQLite, complemented by a simple frontend.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
