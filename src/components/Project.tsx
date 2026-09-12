@@ -15,7 +15,7 @@ function Project() {
       <div className="projects-grid">
         <div className="project">
           <a
-            href="https://github.com/AgniAditya/react-js/tree/main/13-redux-project"
+            href="https://github.com/AgniAditya/notification-service"
             target="_blank"
             rel="noreferrer"
           >
@@ -27,7 +27,7 @@ function Project() {
             />
           </a>
           <a
-            href="https://github.com/AgniAditya/react-js/tree/main/13-redux-project"
+            href="https://github.com/AgniAditya/notification-service"
             target="_blank"
             rel="noreferrer"
           >
@@ -42,7 +42,7 @@ function Project() {
         </div>
         <div className="project">
           <a
-            href="https://github.com/AgniAditya/react-js/tree/main/13-redux-project"
+            href="https://github.com/AgniAditya/notification-service"
             target="_blank"
             rel="noreferrer"
           >
